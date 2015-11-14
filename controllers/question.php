@@ -19,11 +19,11 @@ class Question extends CI_Controller {
 		$this->load->library('form_validation');
 
 		$this->form_validation->set_rules('sender', 'sender', 'required|trim');
-		$this->form_validation->set_rules('email', 'email', 'required|trim|valid_email')
-		$this->form_validation->set_rules('topic_id', 'topic_id', 'required|trim')
-		$this->form_validation->set_rules('content', 'content', 'required|trim')
-		$this->form_validation->set_rules('theme', 'theme', 'required|trim')
-		$this->form_validation->set_rules('string', 'string', 'required|trim')
+		$this->form_validation->set_rules('email', 'email', 'required|trim|valid_email');
+		$this->form_validation->set_rules('topic_id', 'topic_id', 'required|trim');
+		$this->form_validation->set_rules('content', 'content', 'required|trim');
+		$this->form_validation->set_rules('theme', 'theme', 'required|trim');
+		$this->form_validation->set_rules('string', 'string', 'required|trim');
 
 		
 
@@ -34,7 +34,7 @@ class Question extends CI_Controller {
 		} 
 		else 
 		{
-			if (valid_email($this->input->post('email'))
+			if (valid_email($this->input->post('email')))
 			{
 				$this->question_model->add_question();
 				echo "success!";
