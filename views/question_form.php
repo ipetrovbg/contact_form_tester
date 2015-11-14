@@ -2,7 +2,7 @@
 echo form_open('question/add_question_info');
 ?>
 
-<div class="form-group">
+<div>
 	<?php 	
 //input type=text
 	//INSERT
@@ -10,7 +10,6 @@ echo form_open('question/add_question_info');
 	echo form_label('from');
 
 	$data_sender = array(
-		'class' => 'form-control',	
 		'name' => 'sender',	
 		'value' => set_value('sender'),
 		'placeholder' => 'from',			
@@ -20,7 +19,7 @@ echo form_open('question/add_question_info');
 	echo '<p>'.form_input($data_sender).'</p>';
 	?>
 </div>
-<div class="form-group">
+<div>
 <?php 	
 //input type=text
 	//INSERT
@@ -28,7 +27,7 @@ echo form_open('question/add_question_info');
 	echo form_label('email');
 
 	$data_email = array(
-		'class' => 'form-control',	
+		
 		'name' => 'email',	
 		'value' => set_value('email'),
 		'placeholder' => 'email',			
@@ -38,7 +37,7 @@ echo form_open('question/add_question_info');
 	echo '<p>'.form_input($data_email).'</p>';
 	?>
 </div>
-<div class="form-group">
+<div>
 	<?php 	
 //
 	echo form_label('select category');
@@ -54,8 +53,7 @@ echo form_open('question/add_question_info');
 	echo form_dropdown('topic', $topic_options, set_value('test', ( ( !empty($topic_value) ) ? "$topic_value" : 0 ) ));
 	?>
 </div>
-
-<div class="form-group">
+<div>
 	<?php 	
 //input type=text
 	//INSERT d%
